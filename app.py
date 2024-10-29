@@ -5,8 +5,8 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import streamlit as st
 
-# Load the Iris dataset
-df = pd.read_csv("E:/iris.csv")
+# Load the Iris dataset from GitHub
+df = pd.read_csv("https://raw.githubusercontent.com/vishamver/my_ml_projects/main/iris.csv")
 
 # Feature and target selection
 X = df[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']]
@@ -47,4 +47,3 @@ if st.button('Predict'):
     
     # Display the result
     st.success(f"The predicted Iris species is: {prediction}")
-
